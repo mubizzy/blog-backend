@@ -8,9 +8,7 @@ app.use(express.json());
 app.use("/api/user", router);
 app.use("/api/blog", blogRouter);
 mongoose
-  .connect(
-    "mongodb+srv://admin:Dsep0qMaOS4QOnLS@cluster0.tyg8fi3.mongodb.net/?retryWrites=true&w=majority"
-  )
+  .connect("")
   .then(() => app.listen(5000))
   .then(() =>
     console.log("Connected to the database and listening on localhost")
